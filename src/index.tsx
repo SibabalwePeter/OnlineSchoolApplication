@@ -8,6 +8,7 @@ import { createBrowserHistory } from 'history';
 import configureStore from './store/configureStore';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 // Create browser history to use in the Redux store
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href') as string;
@@ -19,7 +20,13 @@ const store = configureStore(history);
 ReactDOM.render(
     <Provider store={store}>
         <ConnectedRouter history={history}>
+            <Auth0Provider
+                domain="capslocktechnologies-login.us.auth0.com"
+                clientId="KmBEygA0N7aC3DeTryo6SkHAR0rsizD4"
+                redirectUri={window.location.origin}
+                >
             <App />
+            </Auth0Provider>
         </ConnectedRouter>
     </Provider>,
     document.getElementById('root'));
