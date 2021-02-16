@@ -11,7 +11,7 @@ find a way to determine user role and render dashboards accordingly
 
 const GeneralDashboard =()=> {
     const { user } = useAuth0();
-    return "142848@gmail.com"!=="142848@gmail.com"? <LearnerDashboard /> : <AdminDashboard />;
+    return "1"==="1"? <LearnerDashboard /> : <AdminDashboard />;
 };
 
 export default GeneralDashboard;
