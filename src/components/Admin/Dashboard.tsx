@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
-import { RouteComponentProps } from 'react-router';
 
-/* Must be like Rhodes dashboard for students */
+/* Must be like Rhodes dashboard for students but tabs must be vertical on the left hand side */
 
 class AdminDashboard extends React.PureComponent {
     public render() {

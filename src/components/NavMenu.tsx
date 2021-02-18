@@ -6,7 +6,7 @@ import Authentication from './Authentication';
 import { useAuth0 } from '@auth0/auth0-react';
 
 const NavMenu=()=>{
-    const {isAuthenticated, user} = useAuth0(); 
+    const {isAuthenticated} = useAuth0(); 
     return (
         <header>
             <Navbar className="navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3" light>
