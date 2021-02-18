@@ -9,7 +9,7 @@ find a way to determine user role and render dashboards accordingly
 
 
 const GeneralDashboard =()=> {
-    return "1"==="1"? <LearnerDashboard /> : <AdminDashboard />;
+    return "3"==="3"? <LearnerDashboard /> : <AdminDashboard />;
 };
 
 export default GeneralDashboard;
