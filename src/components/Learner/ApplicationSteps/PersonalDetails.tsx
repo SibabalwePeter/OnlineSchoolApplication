@@ -12,4 +12,6 @@ class PersonalDetails extends React.PureComponent {
     }
 }
 
+
+
 export default PersonalDetails
