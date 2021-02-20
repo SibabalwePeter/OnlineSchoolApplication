@@ -5,7 +5,7 @@ import Step from '@material-ui/core/Step';
 import StepButton from '@material-ui/core/StepButton';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import {Learner, NextOfKin} from './ApplicationSteps/Form';
+import { Learner, NextOfKin, CurrentSubjects, ProposedSubjects, Documents} from './ApplicationSteps/Form';
 
 const useStyles = makeStyles((theme: { spacing: (arg0: number) => any; }) => ({
     root: {
@@ -33,21 +33,19 @@ function getSteps() {
 function getStepContent(step: number) {
     switch (step) {
         case 0:
-            return <Learner />
+            return <NextOfKin/>
         case 1:
-            return <NextOfKin />;
+            return <Learner/>;
         case 2:
             return 'Step 3: This is the bit I really care about!';
         case 3:
-            return 'Step 2: What is an ad group anyways?';
+            return <CurrentSubjects/>;
         case 4:
-            return 'Step 3: This is the bit I really care about!';
+            return <ProposedSubjects/>;
         case 5:
-            return 'Step 2: What is an ad group anyways?';
+            return <Documents/>;
         case 6:
             return 'Step 3: This is the bit I really care about!';
-        case 7:
-            return 'Step 2: What is an ad group anyways?';
         default:
             return 'Unknown step';
     }
