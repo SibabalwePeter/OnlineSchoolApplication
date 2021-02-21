@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Container } from 'reactstrap';
 import { FormControl, InputLabel, MenuItem, Select, TextField,   } from '@material-ui/core';
+import * as Application from '../../../store/ApplicationForm';
 
 export const Learner=()=>{
     return (
@@ -8,7 +9,7 @@ export const Learner=()=>{
             <form  noValidate autoComplete="off">
                 <div>
                     <FormControl className="d-xl m-4 col-1">
-                        <InputLabel id="genderLbl">Age</InputLabel>
+                        <InputLabel id="genderLbl">Gender</InputLabel>
                         <Select
                             labelId="genderLbl"
                             id="gender"
@@ -41,19 +42,24 @@ export const Learner=()=>{
 }
 
 export const NextOfKin =()=>{
+
+    const updateNextOfKin = (e: { target: any; }) => {
+        Application.updateNextOfKin(e.target.value, e.target.id);
+    }
+
     return (
         <Container>
             <form noValidate autoComplete="off">
                 <div>
-                    <TextField className="d-xl m-4 col-3" label="First Name" />
-                    <TextField className="d-xl m-4 col-3" label="Middle Name" />
-                    <TextField className="d-xl m-4 col-3" label="Second Name" />
-                    <TextField className="d-xl m-4 col-3" label="ID Number" />
+                    <TextField className="d-xl m-4 col-3" id="firstname" label="First Name" onChange={updateNextOfKin} />
+                    <TextField className="d-xl m-4 col-3" id="middlename" label="Middle Name" />
+                    <TextField className="d-xl m-4 col-3" id="secondname" label="Second Name" />
+                    <TextField className="d-xl m-4 col-3" id="idnumber" label="ID Number" />
                 </div>
                 <div>
-                    <TextField className="d-xl m-4 col-2" label="Email Address" />
-                    <TextField className="d-xl m-4 col-2" label="Contact Number" />
-                    <TextField className="d-xl m-4 col-2" label="Contact Number 2" />
+                    <TextField className="d-xl m-4 col-2" id="emailaddress" label="Email Address" />
+                    <TextField className="d-xl m-4 col-2" id="contact1" label="Contact Number" />
+                    <TextField className="d-xl m-4 col-2" id="contact2" label="Contact Number 2" />
                 </div>
             </form>
         </Container>
