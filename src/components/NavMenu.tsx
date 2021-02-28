@@ -23,7 +23,11 @@ const NavMenu=()=>{
                             </NavItem>
                             {isAuthenticated?
                             <NavItem>
-                                <NavLink tag={Link} className="text-dark" to="/GeneralDashboard">Dashboard</NavLink>
+                                <NavLink tag={Link} className="text-dark" to="/AdminDashboard">Dashboard</NavLink>
+                            </NavItem>:""}
+                            {isAuthenticated?
+                            <NavItem>
+                                <NavLink tag={Link} className="text-dark" to="/NewApplication">New Application</NavLink>
                             </NavItem>:""}
                             <NavItem>
                                 <NavLink tag={Link} className="text-dark" to="/fetch-data">About</NavLink>
