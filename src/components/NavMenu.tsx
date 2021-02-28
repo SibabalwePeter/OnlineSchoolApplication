@@ -29,7 +29,7 @@ const NavMenu=()=>{
                                 <NavLink tag={Link} className="text-dark" to="/fetch-data">About</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag={Link} className="text-dark">{isAuthenticated ? "Logout " : "Login "}<Authentication /></NavLink>
+                                <NavLink tag={Link} className="text-dark"><Authentication /></NavLink>
                             </NavItem>
                         </ul>
                     </Collapse>

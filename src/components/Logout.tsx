@@ -4,7 +4,6 @@ import { FiLogOut } from "react-icons/fi";
 
 const Logout = () => {
     const { logout } = useAuth0();
-
     return <FiLogOut onClick={() => logout()} />;
 };
 
