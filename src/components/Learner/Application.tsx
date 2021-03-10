@@ -5,7 +5,7 @@ import Step from '@material-ui/core/Step';
 import StepButton from '@material-ui/core/StepButton';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { Learner, NextOfKin, CurrentSubjects, ProposedSubjects, Documents} from './ApplicationSteps/Form';
+import { Learner, NextOfKin, MedicalAid, CurrentSubjects, ProposedSubjects, Documents} from './ApplicationSteps/Form';
 
 const useStyles = makeStyles((theme: { spacing: (arg0: number) => any; }) => ({
     root: {
@@ -37,7 +37,7 @@ function getStepContent(step: number) {
         case 1:
             return <Learner/>;
         case 2:
-            return 'Step 3: This is the bit I really care about!';
+            return <MedicalAid/>;
         case 3:
             return <CurrentSubjects/>;
         case 4:

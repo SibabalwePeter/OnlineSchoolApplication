@@ -23,7 +23,7 @@ export const Learner=()=>{
                 <TextField className="d-xl m-4 col-3" label="Second Name" />
                 <TextField className="d-xl m-4 col-3" label="ID Number" />
                 <TextField className="d-xl m-4 col-3" label="Passport Number" />
-                <FormControl className="d-xl m-4 col-1">
+                <FormControl className="d-xl m-4 col-3">
                     <InputLabel id="genderLbl">Population Group</InputLabel>
                     <Select
                         labelId="genderLbl"
@@ -37,7 +37,7 @@ export const Learner=()=>{
                         <MenuItem value="colourde">Other</MenuItem>
                     </Select>
                 </FormControl>
-                <FormControl className="d-xl m-4 col-1">
+                <FormControl className="d-xl m-4 col-3">
                     <InputLabel id="genderLbl">Home Language</InputLabel>
                     <Select
                         labelId="genderLbl"
@@ -51,7 +51,7 @@ export const Learner=()=>{
                         <MenuItem value="colourde">Other</MenuItem>
                     </Select>
                 </FormControl>
-                <FormControl className="d-xl m-4 col-1">
+                <FormControl className="d-xl m-4 col-3">
                     <InputLabel id="genderLbl">Language of Instructions</InputLabel>
                     <Select
                         labelId="genderLbl"
@@ -71,7 +71,7 @@ export const Learner=()=>{
                     <FormControlLabel value="male" control={<Radio />} label="Yes" />
                 </RadioGroup>
                 <TextField className="d-xl m-4 col-3" label="Boarding Address" />
-                <FormControl className="d-xl m-4 col-1">
+                <FormControl className="d-xl m-4 col-3">
                     <InputLabel id="genderLbl">Preffered Language of Instructions</InputLabel>
                     <Select
                         labelId="genderLbl"
@@ -85,7 +85,7 @@ export const Learner=()=>{
                         <MenuItem value="colourde">Other</MenuItem>
                     </Select>
                 </FormControl>
-                <FormControl className="d-xl m-4 col-1">
+                <FormControl className="d-xl m-4 col-3">
                     <InputLabel id="genderLbl">Mode of transport to school</InputLabel>
                     <Select
                         labelId="genderLbl"
@@ -105,7 +105,7 @@ export const Learner=()=>{
                 <TextField className="d-xl m-4 col-2" label="Contact Number" />
                 <TextField className="d-xl m-4 col-2" label="Contact Number 2" />
                 <TextField className="d-xl m-4 col-4" label="Home Address" />
-                <FormControl className="d-xl m-4 col-1">
+                <FormControl className="d-xl m-4 col-3">
                     <InputLabel id="genderLbl">Any deceased parent?</InputLabel>
                     <Select
                         labelId="genderLbl"
@@ -119,7 +119,7 @@ export const Learner=()=>{
                     </Select>
                 </FormControl>
                 <TextField className="d-xl m-4 col-2" label="Religion/Demomination" />
-                <FormControl className="d-xl m-4 col-1">
+                <FormControl className="d-xl m-4 col-3">
                     <InputLabel id="genderLbl">Sport?</InputLabel>
                     <Select
                         labelId="genderLbl"
@@ -132,10 +132,10 @@ export const Learner=()=>{
                         <MenuItem value="colourde">Cricket</MenuItem>
                     </Select>
                 </FormControl>
-                <TextField className="d-xl m-4 col-2" label="Pronvincial honours" />
+                <TextField className="d-xl m-4 col-3" label="Pronvincial honours" />
                 
                 <TextField className="d-xl m-4 col-2" label="Previous School" />
-                <FormControl className="d-xl m-4 col-1">
+                <FormControl className="d-xl m-4 col-3">
                     <InputLabel id="genderLbl">Province?</InputLabel>
                     <Select
                         labelId="genderLbl"
@@ -191,6 +191,22 @@ export const NextOfKin =()=>{
     )
 }
 
+export const MedicalAid = () => {
+
+    return (
+        <Container>
+            <form noValidate autoComplete="off">
+                <div>
+                    <TextField className="d-xl m-4 col-3" id="name" label="Name" />
+                    <TextField className="d-xl m-4 col-3" id="medicalAidNumber" label="Medical Aid Number" />
+                    <TextField className="d-xl m-4 col-3" id="telephoneNumber" label="Telephone Number" />
+                    <TextField className="d-xl m-4 col-3" id="primaryBeneficiary" label="Primary Beneficiary" />
+                </div>
+            </form>
+        </Container>
+    )
+}
+
 export const CurrentSubjects = () => {
     return (
         <Container>
@@ -210,10 +226,7 @@ export const CurrentSubjects = () => {
                                         value="Male"
                                     >
                                         <MenuItem value="---">---</MenuItem>
-                                        <MenuItem value="XhosaML">IsiXhosa Home Language</MenuItem>
-                                            <MenuItem value="EnglishHL">English HL</MenuItem>
-                                        <MenuItem value="EnglishFAL">English FAL</MenuItem>
-                                        <MenuItem value="AfrikaansHL">Afrikaans HL</MenuItem>
+                                       {/* Must be populated from the DB*/}
                                     </Select>
                                 </FormControl>
                             </td>
@@ -247,10 +260,7 @@ export const ProposedSubjects = () => {
                                             value="Male"
                                         >
                                             <MenuItem value="---">---</MenuItem>
-                                            <MenuItem value="XhosaML">IsiXhosa Home Language</MenuItem>
-                                            <MenuItem value="EnglishHL">English HL</MenuItem>
-                                            <MenuItem value="EnglishFAL">English FAL</MenuItem>
-                                            <MenuItem value="AfrikaansHL">Afrikaans HL</MenuItem>
+                                            {/* They must populated from the DB*/}
                                         </Select>
                                     </FormControl>
                                 </td>
