@@ -8,7 +8,8 @@ export var ApplicationForm = {
             idNumber: "",
             email: "",
             contact1: "",
-            contact2: "" },
+            contact2: "" 
+          },
           Learner: {
             gender: "",
             firstName: "",
@@ -133,6 +134,36 @@ export const updateLearner: any =(value: any, input :string) => {
       return ApplicationForm.Learner.province = value;
     case 'provipreviouslyEnrolledInTheProvincence':
       return ApplicationForm.Learner.province = value;
+    default:
+      return "";
+  }
+}
+
+export const updateMedicalAid: any =(value: any, input :string) => {
+  
+  switch (input) {
+    case 'medicalAidNumber':
+      return ApplicationForm.MedicalRecord.medicalAidNumber = value;
+      case 'telephoneNumber':
+        return ApplicationForm.MedicalRecord.telephoneNumber = value;
+        case 'primaryBeneficiary':
+          return ApplicationForm.MedicalRecord.primaryBeneficiary = value;
+    default:
+      return "";
+  }
+}
+
+export const updateDocuments: any =(value: any, input :string) => {
+  
+  switch (input) {
+    case 'id':
+      return ApplicationForm.Documents.id = value;
+    case 'report':
+      return ApplicationForm.Documents.report = value;
+    case 'tranfer':
+      return ApplicationForm.Documents.tranfer = value;
+    case 'nextOfKinID':
+      return ApplicationForm.Documents.nextOfKinID = value;
     default:
       return "";
   }
