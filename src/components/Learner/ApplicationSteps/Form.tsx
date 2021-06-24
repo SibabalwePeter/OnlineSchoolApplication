@@ -177,14 +177,14 @@ export const NextOfKin =()=>{
             <form noValidate autoComplete="off">
                 <div>
                     <TextField className="d-xl m-4 col-3" id="firstname" label="First Name" onChange={updateNextOfKin} />
-                    <TextField className="d-xl m-4 col-3" id="middlename" label="Middle Name" />
-                    <TextField className="d-xl m-4 col-3" id="secondname" label="Second Name" />
-                    <TextField className="d-xl m-4 col-3" id="idnumber" label="ID Number" />
+                    <TextField className="d-xl m-4 col-3" id="middlename" label="Middle Name" onChange={updateNextOfKin} />
+                    <TextField className="d-xl m-4 col-3" id="secondname" label="Second Name" onChange={updateNextOfKin} />
+                    <TextField className="d-xl m-4 col-3" id="idnumber" label="ID Number" onChange={updateNextOfKin} />
                 </div>
                 <div>
-                    <TextField className="d-xl m-4 col-2" id="emailaddress" label="Email Address" />
-                    <TextField className="d-xl m-4 col-2" id="contact1" label="Contact Number" />
-                    <TextField className="d-xl m-4 col-2" id="contact2" label="Contact Number 2" />
+                    <TextField className="d-xl m-4 col-2" id="emailaddress" label="Email Address" onChange={updateNextOfKin} />
+                    <TextField className="d-xl m-4 col-2" id="contact1" label="Contact Number" onChange={updateNextOfKin} />
+                    <TextField className="d-xl m-4 col-2" id="contact2" label="Contact Number 2" onChange={updateNextOfKin} />
                 </div>
             </form>
         </Container>
