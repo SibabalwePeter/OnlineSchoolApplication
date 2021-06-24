@@ -280,26 +280,26 @@ export const Documents = () => {
         <Container>
             <div className="input-group m-4 col-4">
                 <div className="custom-file">
-                    <input type="file" className="custom-file-input d-xl" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" />
-                    <label className="custom-file-label" htmlFor="inputGroupFile01">Upload ID</label>
+                    <input type="file" className="custom-file-input d-xl" id="id" aria-describedby="inputGroupFileAddon01" />
+                    <label className="custom-file-label" htmlFor="id">ID</label>
                 </div>
             </div>
             <div className="input-group m-4 col-4">
                 <div className="custom-file">
-                    <input type="file" className="custom-file-input d-xl" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" />
-                    <label className="custom-file-label" htmlFor="inputGroupFile01">Report</label>
+                    <input type="file" className="custom-file-input d-xl" id="report" aria-describedby="inputGroupFileAddon01" />
+                    <label className="custom-file-label" htmlFor="report">Report</label>
                 </div>
             </div>
             <div className="input-group m-4 col-4">
                 <div className="custom-file">
-                    <input type="file" className="custom-file-input d-xl" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" />
-                    <label className="custom-file-label" htmlFor="inputGroupFile01">Tranfer</label>
+                    <input type="file" className="custom-file-input d-xl" id="tranfer" aria-describedby="inputGroupFileAddon01" />
+                    <label className="custom-file-label" htmlFor="tranfer">Tranfer</label>
                 </div>
             </div>
             <div className="input-group m-4 col-4">
                 <div className="custom-file">
-                    <input type="file" className="custom-file-input d-xl" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" />
-                    <label className="custom-file-label" htmlFor="inputGroupFile01">Next of Kin ID</label>
+                    <input type="file" className="custom-file-input d-xl" id="nextOfKinID" aria-describedby="inputGroupFileAddon01" />
+                    <label className="custom-file-label" htmlFor="nextOfKinID">Next of Kin ID</label>
                 </div>
             </div>
         </Container>
