@@ -38,9 +38,21 @@ export var ApplicationForm = {
             province: "",
             previouslyEnrolledInTheProvince: ""
           },
-          MedicalRecord: {},
+          MedicalRecord: {
+            medicalAidNumber: "",
+            telephoneNumber: "",
+            primaryBeneficiary: ""
+          },
           CurrentSubjects: {},
-          ProposedSubjects: {}
+          ProposedSubjects: {},
+          Documents:{
+            id: "",
+            report: "",
+            tranfer: "",
+            nextOfKinID: "",
+            
+
+          }
 };
 
 export const updateNextOfKin: any =(value: any, input :string) => {
