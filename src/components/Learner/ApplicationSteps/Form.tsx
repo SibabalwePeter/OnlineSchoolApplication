@@ -193,14 +193,18 @@ export const NextOfKin =()=>{
 
 export const MedicalAid = () => {
 
+    const updateMedicalAid = (e: { target: any; }) => {
+        Application.updateMedicalAid(e.target.value, e.target.id);
+    }
+
     return (
         <Container>
             <form noValidate autoComplete="off">
                 <div>
-                    <TextField className="d-xl m-4 col-3" id="name" label="Name" />
-                    <TextField className="d-xl m-4 col-3" id="medicalAidNumber" label="Medical Aid Number" />
-                    <TextField className="d-xl m-4 col-3" id="telephoneNumber" label="Telephone Number" />
-                    <TextField className="d-xl m-4 col-3" id="primaryBeneficiary" label="Primary Beneficiary" />
+                    <TextField className="d-xl m-4 col-3" id="name" label="Name" onChange={updateMedicalAid} />
+                    <TextField className="d-xl m-4 col-3" id="medicalAidNumber" label="Medical Aid Number" onChange={updateMedicalAid}/>
+                    <TextField className="d-xl m-4 col-3" id="telephoneNumber" label="Telephone Number" onChange={updateMedicalAid}/>
+                    <TextField className="d-xl m-4 col-3" id="primaryBeneficiary" label="Primary Beneficiary" onChange={updateMedicalAid}/>
                 </div>
             </form>
         </Container>
@@ -208,6 +212,7 @@ export const MedicalAid = () => {
 }
 
 export const CurrentSubjects = () => {
+
     return (
         <Container>
             <form noValidate autoComplete="off">
@@ -276,29 +281,34 @@ export const ProposedSubjects = () => {
 }
 
 export const Documents = () => {
+
+    const updateDocuments = (e: { target: any; }) => {
+        Application.updateDocuments(e.target.value, e.target.id);
+    }
+
     return (
         <Container>
             <div className="input-group m-4 col-4">
                 <div className="custom-file">
-                    <input type="file" className="custom-file-input d-xl" id="id" aria-describedby="inputGroupFileAddon01" />
+                    <input type="file" className="custom-file-input d-xl" id="id" aria-describedby="inputGroupFileAddon01" onChange={updateDocuments}/>
                     <label className="custom-file-label" htmlFor="id">ID</label>
                 </div>
             </div>
             <div className="input-group m-4 col-4">
                 <div className="custom-file">
-                    <input type="file" className="custom-file-input d-xl" id="report" aria-describedby="inputGroupFileAddon01" />
+                    <input type="file" className="custom-file-input d-xl" id="report" aria-describedby="inputGroupFileAddon01" onChange={updateDocuments}/>
                     <label className="custom-file-label" htmlFor="report">Report</label>
                 </div>
             </div>
             <div className="input-group m-4 col-4">
                 <div className="custom-file">
-                    <input type="file" className="custom-file-input d-xl" id="tranfer" aria-describedby="inputGroupFileAddon01" />
+                    <input type="file" className="custom-file-input d-xl" id="tranfer" aria-describedby="inputGroupFileAddon01" onChange={updateDocuments}/>
                     <label className="custom-file-label" htmlFor="tranfer">Tranfer</label>
                 </div>
             </div>
             <div className="input-group m-4 col-4">
                 <div className="custom-file">
-                    <input type="file" className="custom-file-input d-xl" id="nextOfKinID" aria-describedby="inputGroupFileAddon01" />
+                    <input type="file" className="custom-file-input d-xl" id="nextOfKinID" aria-describedby="inputGroupFileAddon01" onChange={updateDocuments}/>
                     <label className="custom-file-label" htmlFor="nextOfKinID">Next of Kin ID</label>
                 </div>
             </div>
